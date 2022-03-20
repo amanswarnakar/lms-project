@@ -1,0 +1,41 @@
+<%- include('partials/header') %> <%- include('partials/nav') %>
+
+<div class="container">
+  <div class="top-bar">
+    <div class="user-name">
+      <i class="fa-solid fa-user"></i> &ensp; User: <%= username %>
+    </div>
+  </div>
+  <div class="courses">
+    <% courses.forEach(course => { %>
+    <div class="course">
+      <h1 class="course-title"><%= course.title %></h1>
+      <p class="course-description"><%= course.description %></p>
+      <iframe
+        class="video-popup"
+        width="900"
+        height="600"
+        src="<%= course.link %>"
+      >
+      </iframe>
+      <form method="post" action="/<%= username %>/courses" class="completed">
+        <button
+          type="submit"
+          name="courseID"
+          value="<%= course._id %>"
+          class="complete btn"
+          id="complete"
+        >
+          Mark Complete
+        </button>
+        <h3>
+          Status:&ensp;<% if (course.completed) { %> Completed <% } else { %>
+          Not Complete <% } %>
+        </h3>
+      </form>
+    </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

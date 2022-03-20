@@ -1,0 +1,60 @@
+<%- include('partials/header') %> <%- include('partials/nav') %>
+<div class="container">
+  <div class="top-bar">
+    <div class="user-name">
+      <i class="fa-solid fa-user"></i> &ensp; User: <%= username %>
+    </div>
+  </div>
+
+  <form
+    action="/<%= username %>/tasks"
+    method="post"
+    class="task center add-tasks"
+  >
+    <span class="add-task-header">
+      <h1>Add Task</h1>
+      <button type="submit" class="add-task-btn">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </span>
+    <input
+      class="form-controls"
+      type="text"
+      name="taskTitle"
+      autocomplete="off"
+      required
+      placeholder="Title"
+    />
+    <input
+      class="form-controls"
+      type="text"
+      name="taskDescription"
+      autocomplete="off"
+      required
+      placeholder="Description"
+    />
+  </form>
+
+  <div class="tasks">
+    <% tasks.forEach(task => { %>
+    <form action="/<%= username %>/tasks/delete" method="post">
+      <div class="task">
+        <div class="task-header">
+          <h1><%= task.title %></h1>
+          <button
+            type="submit"
+            name="deleteTask"
+            value="<%= task._id %>"
+            class="btn"
+          >
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </div>
+        <p><%= task.description %></p>
+      </div>
+    </form>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

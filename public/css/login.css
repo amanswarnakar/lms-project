@@ -1,0 +1,262 @@
+/* @import url("https://fonts.googleapis.com/css?family:Muli&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(202, 197, 255, 0.788);
+  color: #fff;
+  font-family: "Mulish", sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+
+nav {
+  height: 150px;
+  max-width: 950px;
+  width: 90%;
+  top: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo-text {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+nav .a-btn {
+  border-radius: 8px;
+  outline: 0;
+  border: 0;
+  width: 100px;
+  text-decoration: none;
+}
+
+.container {
+  background-color: rgba(157, 163, 248, 0.6);
+  min-height: calc(100% - 150px);
+  max-width: 950px;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+.left.image {
+  background: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  position: absolute;
+  width: 60%;
+  left: 0;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.left.image::before {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgb(16, 8, 205, 0.1);
+}
+.right {
+  position: absolute;
+  width: 40%;
+  right: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-form {
+  /* background-color: rgba(157, 163, 248, 0.568); */
+  padding: 20px auto;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 40%;
+}
+.w90 {
+  width: 90%;
+}
+.input-form h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container a {
+  text-decoration: none;
+  color: rgb(108, 100, 206);
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 90%;
+  background-color: rgb(132, 114, 235);
+  padding: 15px;
+  font-size: 16px;
+  font-family: inherit;
+  border: 0;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.text {
+  width: 90%;
+  text-align: center;
+  margin: 20px auto 0;
+}
+.right .text {
+  width: 90%;
+  text-align: left;
+}
+
+.form-control {
+  position: relative;
+  margin: 20px auto 40px;
+  width: 90%;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+.form-control.btn {
+  width: 60%;
+  margin: auto;
+}
+
+.form-control .login-btn {
+  width: 100%;
+  margin: 0 auto;
+}
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: rgba(109, 100, 206, 0.781);
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: rgb(108, 100, 206);
+  transform: translateY(-30px);
+}
+
+footer {
+  bottom: 0;
+  text-align: center;
+  color: rgb(87, 114, 170);
+  height: 50px;
+}
+
+/************************* SIGNUP PAGE *************************/
+
+.header {
+  text-align: center;
+}
+
+.signup-form {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  align-items: flex-start;
+  justify-content: center top;
+}
+
+.inputs .btn {
+  margin: auto;
+}
+
+@media (max-width: 1000px) {
+  nav {
+    width: 90%;
+  }
+  .signup-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 700px) {
+  .inputs {
+    grid-template-columns: auto;
+  }
+
+  .left {
+    display: none;
+  }
+  .right {
+    width: 100%;
+  }
+
+  .text, .right .text {
+    text-align: center;
+  }
+  .container {
+    width: 90%;
+  }
+  .form-control.btn {
+    width: 90%;
+  }
+}

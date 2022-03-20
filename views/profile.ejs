@@ -1,0 +1,87 @@
+<%- include('partials/header') %> <%- include('partials/nav') %>
+<div class="container">
+  <form action="/<%= username %>/profile" method="post">
+    <div class="top-bar">
+      <div class="user-name">
+        <i class="fa-solid fa-user"></i> &ensp; User: <%= username %>
+      </div>
+      <button type="submit" class="btn">Update</button>
+    </div>
+    <div class="details">
+      <div class="details-preview">
+        <div class="left">
+          <img src="<%= imgURL %>" alt="Profile picture" class="img" />
+        </div>
+        <div class="right">
+          <h1 class="name"><%= fullname %></h1>
+          <h2 class="email"><%= email %></h2>
+          <label for="img">Select image:</label>
+          <input type="text" class="imgURL" id="img" name="imgURL" />
+        </div>
+      </div>
+      <div class="account-details">
+        <div class="form-controls">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            autocomplete="off"
+            value="<%= username %>"
+            disabled
+          />
+        </div>
+        <div class="form-controls">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            autocomplete="off"
+            contenteditable="true"
+            value="<%= email %>"
+          />
+        </div>
+        <div class="form-controls">
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            name="firstName"
+            autocomplete="off"
+            contenteditable="true"
+            value="<%= firstName %>"
+          />
+        </div>
+        <div class="form-controls">
+          <label for="lastName">Last Name</label>
+          <input
+            type="text"
+            name="lastName"
+            autocomplete="off"
+            contenteditable="true"
+            value="<%= lastName %>"
+          />
+        </div>
+        <div class="form-controls">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            name="title"
+            value="Student"
+            disabled
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-controls">
+          <label for="language">Language</label>
+          <input
+            type="text"
+            name="language"
+            autocomplete="off"
+            value="English"
+            disabled
+          />
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<%- include('partials/footer') %>

@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-color: rgba(202, 197, 255, 0.788); */
+  color: #000;
+  font-family: "Mulish", Arial, Helvetica, sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: rgb(220, 220, 220);
+}
+
+/***************************** NAV BAR *****************************/
+
+nav {
+  height: 100px;
+  width: 100%;
+
+  padding: 0 50px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eee;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+nav .logo-text {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+}
+nav ul {
+  display: flex;
+  justify-content: end;
+}
+nav ul a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 15px;
+  color: #000;
+}
+nav ul a:hover {
+  color: rgb(58, 125, 192);
+}
+nav ul a:active {
+  transform: scale(0.97);
+}
+.container {
+  min-height: calc(100% - 100px);
+  padding-bottom: 50px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.top-bar {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+.btn {
+  padding: 10px 20px;
+  outline: 0;
+  border: 1px #bbb solid;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.top-bar .btn:hover {
+  background-color: #888;
+  color: #fff;
+}
+.top-bar .btn:active {
+  transform: scale(0.97);
+}
+
+/**************************** PROFILE ****************************/
+
+.details {
+  border-radius: 5px;
+  background-color: #eee;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  height: 70%;
+  padding: 50px 50px 0;
+  margin: 0 50px;
+}
+
+.details-preview {
+  width: 100%;
+  display: flex;
+  padding: 0 50px;
+}
+.details-preview .left {
+  width: 40%;
+  text-align: center;
+}
+
+.details-preview .right {
+  width: 60%;
+  line-height: 50px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.right h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #555;
+}
+.right h2 {
+  font-size: 1.5rem;
+  color: rgb(58, 125, 192);
+}
+
+.details-preview .img {
+  height: 200px;
+  min-height: 200px;
+  width: 200px;
+  min-width: 200px;
+  border: 5px #aaa solid;
+  object-fit: cover;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.account-details {
+  width: 100%;
+  padding: 50px;
+}
+
+.form-controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.form-controls input,
+.right .imgURL {
+  width: 60%;
+  height: 50px;
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  border: 1px #aaa solid;
+}
+
+.right .imgURL {
+  width: 100%;
+}
+
+.form-controls label,
+.right label {
+  font-size: 1rem;
+  color: #888;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+footer {
+  display: flex;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  height: 50px;
+  margin-top: -50px;
+}
+
+/******************* TASKS PAGE *******************/
+
+.add-tasks {
+  max-width: 500px;
+  width: 80%;
+  padding: 50px;
+  display: flex;
+  margin: 0 auto 50px;
+}
+.add-task-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.add-task-btn {
+  border: 0;
+  font-size: 2rem;
+  align-items: center;
+}
+.add-tasks .form-controls {
+  width: 100%;
+  height: 50px;
+  background-color: #0000;
+  border: 0;
+  outline: 0;
+  border-bottom: #aaa 2px solid;
+  font-size: 1.2rem;
+}
+
+.tasks {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: grid;
+  column-gap: 25px;
+  row-gap: 25px;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+}
+
+.task {
+  padding: 30px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #eee;
+  border-radius: 5px;
+  word-wrap: break-word;
+  word-break: break-all;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.task-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.task-header h1 {
+  width: 80%;
+}
+.task-header .btn {
+  font-size: 20px;
+  outline: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+
+/******************** COURSES PAGE ********************/
+
+.courses {
+  width: 100%;
+  margin: auto;
+  padding: 0 50px;
+}
+.course {
+  background-color: #eee;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.course h1 {
+  margin-bottom: 20px;
+}
+.course p {
+  text-align: justify;
+}
+.course .video-popup {
+  margin: 20px 0;
+  border: 0;
+  border-radius: 5px;
+  outline: 0;
+  width: 100%;
+  max-height: 500px;
+}
+.course .completed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+.course h3 {
+  text-align: end;
+}
+.course .completed input {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 20px;
+}
+
+.course .complete {
+  font-size: 1rem;
+}
+
+.course .complete:hover {
+  background-color: #888;
+  color: #fff;
+}
+.course .complete:active {
+  transform: scale(0.97);
+  outline: 0;
+}
+
+@media (max-width: 950px) {
+  nav .logo-text {
+    font-size: 2.2rem;
+  }
+
+  nav ul a {
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
+
+  .tasks {
+    grid-template-columns: auto auto;
+  }
+  .course {
+    padding: 30px;
+  }
+  .course .video-popup {
+    max-height: 360px;
+  }
+  .course h3 {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .course .btn {
+    font-size: 0.8rem;
+  }
+
+  .details {
+    padding: 30px;
+  }
+  .details-preview {
+    width: 100%;
+    padding: 0;
+  }
+  .account-details {
+    margin-top: 30px;
+    padding: 0;
+  }
+  .details-preview .left {
+    text-align: start;
+    padding: 0;
+  }
+
+  .right h1 {
+    font-size: 2rem;
+  }
+  .right h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .details-preview {
+    flex-direction: column;
+  }
+  .details-preview .left {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .details-preview .right {
+    margin: 15px 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  .form-controls input,
+  .right .imgURL {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .form-controls label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 620px) {
+  nav {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  nav .logo-text {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    width: 100%;
+    display: block;
+  }
+
+  nav ul a {
+    font-size: 1.25rem;
+  }
+  .tasks {
+    grid-template-columns: auto;
+    margin: auto;
+    column-gap: 0px;
+    row-gap: 25px;
+  }
+
+  .details {
+    margin: 0 30px;
+  }
+  .top-bar,
+  .courses {
+    padding: 0 30px;
+  }
+  .course h1 {
+    font-size: 1.8rem;
+  }
+  .course .video-popup {
+    max-height: 280px;
+  }
+}
+
+@media (max-width: 400px) {
+  nav .logo-text {
+    font-size: 1.8rem;
+  }
+  .course h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul a {
+    font-size: 1rem;
+    letter-spacing: normal;
+    padding-left: 8px;
+    padding-right: 0;
+    letter-spacing: normal;
+  }
+}
