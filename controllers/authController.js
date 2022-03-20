@@ -102,6 +102,7 @@ module.exports.get_tasks = (req, res) => {
       res.render("tasks", {
         tasks: foundUser.tasks,
         username: foundUser.username,
+        pageTitle: "Tasks",
       });
     }
   });
@@ -162,6 +163,7 @@ module.exports.get_profile = (req, res) => {
         username: foundUser.username,
         fullname: fullname,
         imgURL: foundUser.imgURL,
+        pageTitle: "Profile",
       });
     }
   });
@@ -197,6 +199,7 @@ module.exports.get_courses = (req, res) => {
       res.render("courses", {
         courses: foundUser.courses,
         username: foundUser.username,
+        pageTitle: "Courses",
       });
     }
   });
