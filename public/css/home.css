@@ -161,7 +161,7 @@ nav .logo-text {
 }
 .feature h3 {
   font-size: 1.25rem;
-  margin: 20px auto;
+  margin: 0 auto 20px;
 }
 .feature .feature-img {
   height: 100px;
@@ -269,6 +269,7 @@ footer {
   }
   .feature h3 {
     font-size: 1.2rem;
+    margin: 0 auto 5px;
   }
   .feature p {
     font-size: 0.8rem;
