@@ -6,7 +6,9 @@ const ejs = require("ejs");
 const authRoutes = require("./routes/authRoutes");
 const cookieParser = require("cookie-parser");
 const { requireAuth } = require("./middleware/authMiddleware");
+var favicon = require('serve-favicon');
 
+mongoose.set("strictQuery", true);
 const uri = process.env.MONGO_DB_URI;
 const connectionParams = { useNewUrlParser: true, useUnifiedTopology: true };
 mongoose
@@ -23,6 +25,7 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(cookieParser());
 app.set("view engine", "ejs");
+app.use(favicon(__dirname + '/public/media/images/Funstudy.png'));
 
 app.get("/", (req, res) => {
   res.render("home");
