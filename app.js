@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const authRoutes = require("./routes/authRoutes");
 const cookieParser = require("cookie-parser");
-const { requireAuth } = require("./middleware/authMiddleware");
+// const { requireAuth } = require("./middleware/authMiddleware");
 var favicon = require("serve-favicon");
 
 mongoose.set("strictQuery", true);
