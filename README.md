@@ -9,4 +9,4 @@ The platform also supports login and logout functionality which secures the user
 
 Tech stack used: HTML, CSS, JavaScript, NodeJS, ExpressJS, MongoDB, Railway Hosting. 
 
-Working Website link: https://funstudy.up.railway.app/
+Working Website link: [https://funstudy.onrender.com/](https://funstudy.onrender.com/)
